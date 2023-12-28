@@ -22,10 +22,17 @@ public class Estacionamento
 
     public void RemoverVeiculo()
     {
+
+        if(veiculos.Count == 0)
+        {
+            Console.WriteLine("!!! PATIO VAZIO !!!");
+            return;
+        }
+
         Console.WriteLine("Digite a placa do veículo para check-out:");
         string placa = Console.ReadLine();
 
-        if (veiculos.Any(x => x.ToUpper() == placa.ToUpper()))
+        if (veiculos.Any(x => x.ToUpper().Equals(placa.ToUpper())))
         {
             Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
             int horas = Convert.ToInt32(Console.ReadLine());
