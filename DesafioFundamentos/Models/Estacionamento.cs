@@ -16,8 +16,17 @@ public class Estacionamento
     {
         Console.WriteLine("Digite a placa do veículo que vai estacionar:");
         string placa = Console.ReadLine();
-        veiculos.Add(placa);
-    
+        if(placa != "")
+        {
+            veiculos.Add(placa);
+            Console.WriteLine("Cadastrado com sucesso !");
+            Console.WriteLine();
+        } else
+        {
+            Console.WriteLine("Valor vazio ou invalido, tente novamente.");
+            AdicionarVeiculo();
+        }
+        
     }
 
     public void RemoverVeiculo()
