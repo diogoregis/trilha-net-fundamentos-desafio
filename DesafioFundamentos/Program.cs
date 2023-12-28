@@ -3,7 +3,7 @@
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 
 decimal precoInicial = -1;
-decimal precoPorHora = 0;
+decimal precoPorHora = -1;
 
 Console.WriteLine("Seja bem vindo ao sistema de estacionamento!");
 while(precoInicial < 0)
@@ -12,7 +12,7 @@ while(precoInicial < 0)
     precoInicial = Convert.ToDecimal(Console.ReadLine());
 }
 
-while(precoPorHora <= 0)
+while(precoPorHora < 0)
 {
     Console.WriteLine("Agora digite o preço por hora: ");
     precoPorHora = Convert.ToDecimal(Console.ReadLine());
